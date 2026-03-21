@@ -7,6 +7,13 @@ export type FridgeItem = {
   calories: number
 }
 
+export type Receipt = {
+  id: string
+  store: string
+  date: string
+  items: FridgeItem[]
+}
+
 export type Meal = {
   id: string
   name: string
@@ -65,4 +72,28 @@ export const scannedReceiptItems: FridgeItem[] = [
   { id: "8", name: "Salmon fillet", quantity: 300, unit: "g", expiryDays: 2, calories: 208 },
   { id: "9", name: "Lemon", quantity: 2, unit: "pcs", expiryDays: 14, calories: 17 },
   { id: "10", name: "Greek yogurt", quantity: 400, unit: "g", expiryDays: 7, calories: 97 },
+]
+
+export type DayLog = {
+  date: string
+  meals: string[]
+  totalCalories: number
+}
+
+export const pastDays: DayLog[] = [
+  {
+    date: "Yesterday",
+    meals: ["Oat Porridge", "Grilled Chicken & Broccoli"],
+    totalCalories: 690,
+  },
+  {
+    date: "Friday",
+    meals: ["Scrambled Eggs & Broccoli", "Oat Porridge"],
+    totalCalories: 730,
+  },
+  {
+    date: "Thursday",
+    meals: ["Grilled Chicken & Broccoli"],
+    totalCalories: 380,
+  },
 ]
