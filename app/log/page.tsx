@@ -32,27 +32,28 @@ export default function Log() {
 
           return (
             <Card key={meal.id} className={`p-5 transition ${isLogged ? "opacity-50" : ""}`}>
-              <div className="flex justify-between items-start">
+            <div className="flex justify-between items-start">
                 <div className="flex-1">
-                  <h3 className="font-semibold text-gray-800">{meal.name}</h3>
-                  <p className="text-sm text-gray-400 mt-1">{meal.calories} kcal · {meal.protein}g protein · {meal.carbs}g carbs · {meal.fat}g fat</p>
-                  <p className="text-xs text-gray-300 mt-2">{meal.ingredients.join(", ")}</p>
+                <span className="text-xs font-medium text-green-500">{meal.lifestyleTag}</span>
+                <h3 className="font-semibold text-gray-800 mt-1">{meal.name}</h3>
+                <p className="text-xs text-gray-300 mt-1">{meal.ingredients.join(", ")}</p>
                 </div>
-              </div>
+            </div>
 
-              <details className="mt-3">
-                <summary className="text-xs text-green-500 cursor-pointer">View recipe</summary>
+            <details className="mt-3">
+                <summary className="text-xs text-green-500 cursor-pointer">Nutrition & recipe</summary>
+                <p className="text-sm text-gray-400 mt-2">{meal.calories} kcal · {meal.protein}g protein · {meal.carbs}g carbs · {meal.fat}g fat</p>
                 <p className="text-sm text-gray-500 mt-2 leading-relaxed">{meal.instructions}</p>
-              </details>
+            </details>
 
-              <Button
+            <Button
                 onClick={() => handleLogMeal(meal)}
                 disabled={isLogged}
                 variant={isLogged ? "outline" : "default"}
                 className="w-full mt-4 rounded-xl"
-              >
+            >
                 {isJustLogged ? "✅ Logged!" : isLogged ? "Already logged" : "I made this tonight"}
-              </Button>
+            </Button>
             </Card>
           )
         })}

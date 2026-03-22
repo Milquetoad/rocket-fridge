@@ -23,6 +23,8 @@ export type Meal = {
   carbs: number
   fat: number
   instructions: string
+  lifestyleTag: string
+  activitySuggestion: string
 }
 
 export const fridgeItems: FridgeItem[] = [
@@ -44,7 +46,9 @@ export const meals: Meal[] = [
     protein: 28,
     carbs: 12,
     fat: 31,
-    instructions: "Melt butter in a pan. Whisk 3 eggs and pour in. Add steamed broccoli and top with cheddar."
+    instructions: "Melt butter in a pan. Whisk 3 eggs and pour in. Add steamed broccoli and top with cheddar.",
+    lifestyleTag: "🌿 Light and nourishing",
+    activitySuggestion: "perfect before an evening walk"
   },
   {
     id: "2",
@@ -54,7 +58,9 @@ export const meals: Meal[] = [
     protein: 48,
     carbs: 8,
     fat: 14,
-    instructions: "Season chicken breast and grill for 6 minutes each side. Steam broccoli and serve with a knob of butter."
+    instructions: "Season chicken breast and grill for 6 minutes each side. Steam broccoli and serve with a knob of butter.",
+    lifestyleTag: "💪 Great post-workout",
+    activitySuggestion: "ideal after a run or gym session"
   },
   {
     id: "3",
@@ -64,7 +70,9 @@ export const meals: Meal[] = [
     protein: 12,
     carbs: 54,
     fat: 6,
-    instructions: "Bring milk to a simmer, stir in oats and cook for 5 minutes. Add toppings of your choice."
+    instructions: "Bring milk to a simmer, stir in oats and cook for 5 minutes. Add toppings of your choice.",
+    lifestyleTag: "☀️ Steady morning energy",
+    activitySuggestion: "great fuel before a long day"
   },
 ]
 
